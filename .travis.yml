@@ -8,9 +8,9 @@ services:
 
 jobs:
   include:
-    - stage: Demo-VDG
+    - stage: Demo-mi
       script:
-        - docker build -t ud-viz:demo-vdg .
+        - docker build -t ud-viz:demo-mi .
     - stage: "Markdown link checks"
       language: node_js
       node_js: 16
