@@ -2,7 +2,7 @@ os: linux
 dist: focal
 language: node_js
 node_js:
-  - 16
+  - 18
 services:
   - docker
 
@@ -13,7 +13,7 @@ jobs:
         - docker build -t ud-viz:demo-mi .
     - stage: "Markdown link checks"
       language: node_js
-      node_js: 16
+      node_js: 18
       script:
         - npm install --global remark-cli remark-validate-links
         - remark -u validate-links .
